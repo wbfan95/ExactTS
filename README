@@ -1,0 +1,20 @@
+# ExactTS
+A Fortran program about optimizing the geometry of transition state. 
+
+**Author :** Wenbin FAN (fanwenbin@shu.edu.cn)
+**Supervisor :** Prof. Yongle LI
+
+# Intro
+
+This program can optimize the geometry on existing potential energy surface (PES), including the transition state and local minimum/maximum. Then the vibrational analysis will be output in GaussView format. 
+
+**Input files :** your PES in Fortran, initial guess in .xyz format at `TS.xyz`.
+Output files : `freq_out.txt` for logging the frequencies during optimization, `freq_visual.log` for viewing the vibrational analysis
+
+# Usage
+
+1. Interface your PES at `interface.f90`,
+2. show a initial guess of geometry in .xyz format at `TS.xyz`,
+3. modify the Makefile,
+4. `make` once,
+5. use `./ExactTS` later for running this program. 
